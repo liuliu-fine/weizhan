@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+    font-style: normal;
+}
+
+body {
+    /*border: 5px #f0f0f0 solid;*/
+}
+a{
+    color: black;
+}
+
+.bg-white {
+    background: white
+}
+
+.text-black {
+    color: black;
+}
+
+.text-orange {
+    color: #ff6966;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-grey {
+    color: #a4a4a4;
+}
+
+.back {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-size: cover;
+}
+
+.back .box {
+    color: #FFFFFF;
+}
+
+.second-title {
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: #e3e3e3;
+    background: #f0f0f0;
+    color: #a4a4a4;
+}
+
+.flag-border {
+    line-height: 18px;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 0 5px 5px 0;
+}
+
+.icon {
+    width: 28px;
+    height: 28px
+}
+
+.icon .icon-text {
+    position: relative;
+    top: -14px;
+    left: -8px
+}
+
+.liner {
+    height: 15px;
+    background: linear-gradient(to top, #a4a4a4, #f0f0f0);
+}
+
+.activity-img {
+    letter-spacing: normal;
+    position: relative;
+    text-align: right;
+    top: -22px;
+    right: 2.5em;
+
+}
+
+.activity-arrow {
+    position: absolute;
+    top: 20%;
+    right: 10px
+}
+
+hr {
+    margin: 0;
+}
