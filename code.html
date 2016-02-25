@@ -55,7 +55,7 @@
 </div>
 
 <div style="background: url('assets/i/img.png') repeat">
-    <div id="test" class="am-padding-sm text-white am-text-right am-g am-sticky">
+    <div id="dropdowm" class="am-padding-sm text-white am-text-right am-g am-sticky">
         <div class="back am-fl am-circle icon">
             <div class="icon-text">
                 <i class="iconfont">&#xe60a;</i>
@@ -301,15 +301,15 @@
         $(window).scroll(function () {
             var a = ___getPageScroll();
             if (a < 50) {
-                $('#test').css('opacity', '').css('background-color', '').css('color', 'white').css('border-bottom-width',0);
-                $('#test').find('.back').css('background-color', 'rgba(0, 0, 0, 0.4)');
-                $('#test').find('.am-text-truncate').addClass('am-hide');
+                $('#dropdowm').css('opacity', '').css('background-color', '').css('color', 'white').css('border-bottom-width',0);
+                $('#dropdowm').find('.back').css('background-color', 'rgba(0, 0, 0, 0.4)');
+                $('#dropdowm').find('.am-text-truncate').addClass('am-hide');
             } else {
                 if (a < 192) {
-                    $('#test').css('opacity', a / 191).css('background-color', '#fff').css('color', '#ff6966').css('border-bottom','1px #e5e5e5 solid');
-                    $('#test').find('.back').css('background-color', '#fff');
-                    $('#test').find('.am-hide').removeClass('am-hide');
-                    $('#test').removeClass('am-margin-left-sm');
+                    $('#dropdowm').css('opacity', a / 191).css('background-color', '#fff').css('color', '#ff6966').css('border-bottom','1px #e5e5e5 solid');
+                    $('#dropdowm').find('.back').css('background-color', '#fff');
+                    $('#dropdowm').find('.am-hide').removeClass('am-hide');
+                    $('#dropdowm').removeClass('am-margin-left-sm');
                 }
             }
         });
