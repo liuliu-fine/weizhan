@@ -97,3 +97,6 @@ a{
 hr {
     margin: 0;
 }
+.am-padding-vertical{
+    padding: 23px 0;
+}
