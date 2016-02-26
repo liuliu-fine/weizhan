@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'iconfont';
-    src: url('../iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('../iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+    src: url('../iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -10,15 +9,16 @@
     font-style: normal;
 }
 
-body {
-    /*border: 5px #f0f0f0 solid;*/
-}
-a{
+a {
     color: black;
 }
 
 .bg-white {
     background: white
+}
+
+.bg-orange {
+    background-color: #ff6966;
 }
 
 .text-black {
@@ -37,9 +37,18 @@ a{
     color: #a4a4a4;
 }
 
+.bg-grey-white{
+    background: #f0f0f0;
+}
+
+
+.padding-xxs {
+    padding-left: 5px;
+}
+
 .back {
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     background-size: cover;
 }
 
@@ -74,18 +83,12 @@ a{
     left: -8px
 }
 
-.liner {
-    height: 15px;
-    background: linear-gradient(to top, #a4a4a4, #f0f0f0);
-}
-
 .activity-img {
     letter-spacing: normal;
     position: relative;
     text-align: right;
     top: -22px;
     right: 2.5em;
-
 }
 
 .activity-arrow {
@@ -93,10 +96,30 @@ a{
     top: 20%;
     right: 10px
 }
+.hide{
+    display: none;
+}
+.button{
+    padding: 5px 12px;
+    color: white;
+    background: #ff6966;
+}
 
 hr {
     margin: 0;
 }
-.am-padding-vertical{
+
+.am-padding-vertical {
     padding: 23px 0;
+}
+.border{
+    border: 1px solid #eeeeee;
+}
+.border-radius{
+    border-radius: 5px;
+
+}
+
+.equal-height{
+    margin-bottom:-3000px; padding-bottom:3000px;
 }
