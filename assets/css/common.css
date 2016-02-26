@@ -105,6 +105,10 @@ a {
     background: #ff6966;
 }
 
+.am-icon-border{
+    border-width: 2px;
+}
+
 hr {
     margin: 0;
 }
@@ -117,7 +121,6 @@ hr {
 }
 .border-radius{
     border-radius: 5px;
-
 }
 
 .equal-height{

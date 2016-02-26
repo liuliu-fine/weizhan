@@ -15,11 +15,13 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-dian:before { content: "\e60e"; }
 .icon-arrow:before { content: "\e607"; }
 .icon-arrow1:before { content: "\e608"; }
 .icon-fenxiang:before { content: "\e600"; }
 .icon-arrow2:before { content: "\e609"; }
 .icon-shenglve:before { content: "\e601"; }
+.icon-huangguan:before { content: "\e60d"; }
 .icon-yinxingqia:before { content: "\e60b"; }
 .icon-arrow-copy:before { content: "\e60a"; }
 .icon-cunqianguan:before { content: "\e60c"; }
