@@ -144,3 +144,11 @@ hr {
     color: white;
     text-decoration: none;
 }
+input:not([type=radio]):not([type=checkbox]), select {
+     vertical-align: bottom;
+}
+input{
+    text-align: center;
+    border-width: 0 0 2px ;
+}
+
