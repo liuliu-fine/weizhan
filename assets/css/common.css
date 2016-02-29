@@ -13,6 +13,8 @@ a {
     color: black;
 }
 
+
+
 .bg-white {
     background: white
 }
@@ -125,4 +127,13 @@ hr {
 
 .equal-height{
     margin-bottom:-3000px; padding-bottom:3000px;
+}
+
+.am-header-default .am-header-nav {
+     color: black;
+}
+
+.am-btn:focus, .am-btn:hover {
+    color: white;
+    text-decoration: none;
 }

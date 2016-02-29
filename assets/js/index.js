@@ -9,20 +9,42 @@ $(function () {
             }
         });
     });
-    $(window).scroll(function () {
-        var yScroll = self.pageYOffset;
-        if (yScroll == 0) {
-            $('#footer').addClass('am-hide');
-        }
-        if (yScroll>preScroll) {
-            $('#footer').addClass('am-hide');
+
+    $('#logic_out').on('click', function () {
+        Cookies.remove('name');
+        window.location.reload();
+    });
+    $('#power').on('click', function () {
+        if (Cookies.get('name')) {
+            self.location = "power.html"
         }
         else {
-            $('#footer').removeClass('am-hide');
+            alert('登陆先！');
         }
-        preScroll = yScroll;
     });
+    $('#logic').on('click', function () {
+        Cookies.set('name','张三',{ expires:7});
+        window.location.reload();
+    })
 });
+$(window).scroll(function () {
+    var yScroll = self.pageYOffset;
+    if (yScroll == 0) {
+        $('#footer').addClass('am-hide');
+    }
+    if (yScroll < preScroll) {
+        $('#footer').addClass('am-hide');
+    }
+    else {
+        $('#footer').removeClass('am-hide');
+    }
+    preScroll = yScroll;
+});
+if (Cookies.get('name')) {
+    $('.logic').show();
+    $('.unlogic').hide();
+
+}
 //navigator.geolocation.getCurrentPosition( // 该函数有如下三个参数
 //    function (pos) { // 如果成果则执行该<a href="https://www.baidu.com/s?wd=%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dBnWczuADkrHbsnH79PHDY0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EPW6sPjbLnH0kPWnsnj61PjRz" target="_blank" class="baidu-highlight">回调函数</a>
 //        alert(
