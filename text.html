@@ -1,49 +1,50 @@
-<!DOCTYPE HTML>
-<html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>CSS</title>
-    <style type="text/css">
-        *{
-            margin:0;
-            padding:0;
-            font-size:12px;
-        }
-        #wrap{
-            overflow:hidden;
-            /*width:670px;*/
-            /*position:relative;*/
-        }
-        .box{
-            float:left;
-            width:190px;
-            background: #c8c8c8 no-repeat;
-            margin-left:10px;
-            padding:10px;
-            padding-bottom:320px;
-            margin-bottom:-300px;
-        }
+    <title>www.jb51.net</title>
+    <style>
+        body {padding:0; margin:0; }
+        /*这些是专用FIREFOX写的，注意IE7也认识*/
+        html,body{ height:100%;}
+        #infoBox[id]{text-align:center; width:100%; height:100%; display:table;}
+        #info[id]{ display:table-cell;vertical-align:middle;} /*这里可以指个宽度试试，是可以自适应的*/
+        /*专为IE6写的*/
+        *html #infoBox{ position:absolute; top:50%; width:100%; text-align:center; display:block; height:auto}
+        *html #info{position:relative; top:-50%; text-align:center;} /*这里可以指个宽度试试，是可以自适应的*/
+        /*这理是专用IE7写的，注意[id]要加上，不然优先JI没有最上边那段NB*/
+        *+html #infoBox[id]{ position:absolute; top:50%; width:100%; text-align:center; display:block; height:auto}
+        *+html #info[id]{position:relative; top:-50%; text-align:center;} /*这里可以指个宽度试试，是可以自适应的*/
+        #tnnd{ border:1px solid red; width:500px; margin:0 auto; font-size:12px; line-height:1.8;}
     </style>
 </head>
-<body style="background-color: #0a6999">
-<div id="wrap">
-    <div class="box">
-        <h1>CSS实现三列DIV等高布局</h1>
-        <p>这确实是个很简单的问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技巧，它一定可以帮助你解决这个头痛的问题。</p>
-        <div class="bottom"></div>
-    </div>
-    <div class="box">
-        <h1>三列DIV等高</h1>
-        <p>这确实是个很简单的问题，也许你也已经相当熟悉，但很多人还不知道问题，也许你也已经相当熟悉，但，也许你也已经相当熟悉，但很多人还不知道问题，也许你也已经相当熟悉，但很多人还不知道问题，也许你也已经相当熟悉，但很多人还不知道问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技还不知道问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技还不知道问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技还不知道问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技还不知道问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技还不知道问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技巧，它一定可以帮助你解决这个头痛的问题。这确实是个很简单的问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技巧，它一定可以帮助你解决这个头痛。</p>
-        <div class="bottom"></div>
-    </div>
-    <div class="box">
-        <h1>CSS实现</h1>
-        <p>这确实是个很简单的问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技巧，它一定可以帮助你解决这个头痛的问题。这确实是个很简单的问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技巧，它一定可以帮助你解决这个头痛的问题。</p>
-        <div class="bottom"></div>
+<body>
+<div id="infoBox">
+    <div id="info">
+        <div id="tnnd">
+            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
+
+            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
+
+            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
+
+            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
+
+            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
+
+            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
+
+            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
+
+            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
+
+            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
+
+            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
+
+        </div>
     </div>
 </div>
-<p>这确实是个很简单的问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技巧，它一定可以帮助你解决这个头痛的问题。这确实是个很简单的问题，也许你也已经相当熟悉，但很多人还不知道。下面介绍的技术是一个简捷的小技巧，它一定可以帮助你解决这个头痛的问题。</p>
-
 </body>
-</html>
+</html> 

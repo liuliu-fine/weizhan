@@ -30,6 +30,9 @@ a {
 .text-orange {
     color: #ff6966;
 }
+.text-shit{
+    color: #bfb787;
+}
 
 .text-white {
     color: white;
@@ -37,6 +40,10 @@ a {
 
 .text-grey {
     color: #a4a4a4;
+}
+
+.text-blue{
+    color: #93cbf1;
 }
 
 .bg-grey-white{
