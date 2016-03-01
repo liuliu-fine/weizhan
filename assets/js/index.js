@@ -1,5 +1,4 @@
 $(function () {
-    var preScroll = -1;
     $('#more').on('click', function () {
         $(this).text().length != 4 ? $(this).text("收起 ▲") : $(this).text("更多优惠 ▼");
         $('#activity .am-g').each(function (index) {
@@ -27,6 +26,7 @@ $(function () {
         window.location.reload();
     })
 });
+var preScroll = -1;
 $(window).scroll(function () {
     var yScroll = self.pageYOffset;
     if (yScroll == 0) {
