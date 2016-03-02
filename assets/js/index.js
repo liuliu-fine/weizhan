@@ -3,10 +3,14 @@ $(function () {
         $(this).text().length != 4 ? $(this).text("收起 ▲") : $(this).text("更多优惠 ▼");
         $('#activity .am-g').each(function (index) {
             if (index > 1) {
-                $(this).next().slideToggle("slow");
                 $(this).slideToggle("slow");
+                $(this).next().slideToggle("slow");
             }
         });
+    });
+
+    $('#card').on('click', function () {
+        self.location = "power.html";
     });
 
     $('#logic_out').on('click', function () {

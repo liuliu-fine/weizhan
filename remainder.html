@@ -53,9 +53,9 @@
             欲充值金额，请呼叫服务员助您操作
         </button>
     </div>
-    <div class="second-title" style="height: 8px"></div>
+    <div class="liner"></div>
     <div class="am-padding-sm">
-        <div class="am-text-xs text-orange">请向服务员展示"识别码"升级会员!</div>
+        <div class="am-text-xs text-orange am-padding-bottom-xs">请向服务员展示"识别码"升级会员!</div>
         <div class="am-g am-g-collapse am-text-center am-text-lg text-orange ">
             <div class="am-u-sm-2 am-g-collapse am-text-left">
                 <div class="am-icon-border"><strong>&nbsp;&nbsp;1&nbsp;&nbsp;</strong></div>
@@ -79,9 +79,9 @@
     </div>
     <hr/>
 </div>
-<div class="bg-white" style="height: 260px"></div>
+<div class="bg-white" style="height: 270px"></div>
 <section>
-    <div class="second-title am-g am-padding-sm am-text-sm title" data-am-sticky="{top:260}">
+    <div class="second-title am-g am-padding-sm am-text-sm">
         <strong class="am-text-default text-black am-margin-right-sm">本月</strong>
     </div>
     <div>
@@ -146,7 +146,7 @@
         <div class="am-cf"></div>
         <hr class="am-margin-left-sm am-margin-top-sm">
     </div>
-    <div class="second-title am-g am-padding-sm am-text-sm title" data-am-sticky="{top:260}">
+    <div class="second-title am-g am-padding-sm am-text-sm">
         <strong class="am-text-default text-black am-margin-right-sm">11月</strong>
     </div>
     <div>
@@ -245,30 +245,5 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/amazeui.js"></script>
 
-<script>
-        ( function(  ) {
-            $.fn.sticky = $( ".title").each(function( offset, limit ) {
-                this.css( "position", "relative" );
-                var element = this
-                        , offset = offset || 0;
-                $( window ).scroll( function( event ) {
-                    var initial_position = element.offset().top - ( parseInt( element.css( "top" ), 10 ) || 0);
-                    if( ( window.pageYOffset + offset ) > initial_position ) {
-                        if( typeof( limit ) !== 'undefined' && ( ( window.pageYOffset + offset + element.height() ) > limit.offset().top ) ) {
-                            return; // do nothing
-                        } else {
-                            element.css( "top", Math.floor( window.pageYOffset - initial_position + offset ) + "px" );
-                        }
-                    } else {
-                        element.css( "top", "initial" );
-                    }
-                } );
-            });
-        } );
-
-        $( ".title").each(function(){
-            $(this).sticky();
-        })
-</script>
 </body>
 </html>
