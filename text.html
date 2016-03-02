@@ -1,50 +1,42 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>www.jb51.net</title>
-    <style>
-        body {padding:0; margin:0; }
-        /*这些是专用FIREFOX写的，注意IE7也认识*/
-        html,body{ height:100%;}
-        #infoBox[id]{text-align:center; width:100%; height:100%; display:table;}
-        #info[id]{ display:table-cell;vertical-align:middle;} /*这里可以指个宽度试试，是可以自适应的*/
-        /*专为IE6写的*/
-        *html #infoBox{ position:absolute; top:50%; width:100%; text-align:center; display:block; height:auto}
-        *html #info{position:relative; top:-50%; text-align:center;} /*这里可以指个宽度试试，是可以自适应的*/
-        /*这理是专用IE7写的，注意[id]要加上，不然优先JI没有最上边那段NB*/
-        *+html #infoBox[id]{ position:absolute; top:50%; width:100%; text-align:center; display:block; height:auto}
-        *+html #info[id]{position:relative; top:-50%; text-align:center;} /*这里可以指个宽度试试，是可以自适应的*/
-        #tnnd{ border:1px solid red; width:500px; margin:0 auto; font-size:12px; line-height:1.8;}
-    </style>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <!--把下面代码加到<head>与</head>之间-->
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        ul,li{list-style:none;}
+        #content{width:600px;margin:0 auto;border:1px solid #f00;}
+        ul li.zzjs{width:400px;text-align:center;margin:20px 100px;background:#00f;color:#fff;font-size:14px;font-weight:bold;height:100px;line-height:100px;}
+        #fudong{position:absolute;top:0;left:50%;width:900px;margin-left:-450px;height:30px;line-height:30px;text-align:center;background:#000;color:#fff;font-size:14px;font-weight:bold;z-index:2;} </style>
 </head>
 <body>
-<div id="infoBox">
-    <div id="info">
-        <div id="tnnd">
-            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
-
-            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
-
-            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
-
-            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
-
-            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
-
-            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
-
-            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
-
-            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
-
-            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
-
-            <a href="http://www.zishu.cn/blogview.asp?logID=818" target="_blank">CSS几个居中问题的解决办法 </a>
-
-        </div>
-    </div>
-</div>
+<div style="height:2000px;"></div>
+<!--把下面代码加到<body>与</body>之间-->
+<div id="fudong">导航条：中国技术教程网，站长建站乐园！</div>
+<script language="javascript">
+    var speed = 50;
+    var scrollTop = null;
+    var hold = 0;
+    var fudong;
+    var pos = null;
+    var timer = null;
+    var moveHeight = null;
+    fudong = document.getElementById("fudong");
+    window.onscroll=scroll_ad;
+    function scroll_ad(){
+        scrollTop = document.documentElement.scrollTop+document.body.scrollTop;
+        pos = scrollTop - fudong.offsetTop;
+        pos = pos/10
+        moveHeight = pos>0?Math.ceil(pos):Math.floor(pos);
+        if(moveHeight!=0){
+            fudong.style.top = fudong.offsetTop+moveHeight+"px";
+            setTimeout(scroll_ad,speed);
+        }
+//alert(scrollTop);
+    }
+</script>
+<div style="width:728px;margin:10px auto; overflow:hidden;"> </div>
 </body>
-</html> 
+</html>

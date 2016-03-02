@@ -130,7 +130,7 @@
                     <span style="margin-left: -3px">免费领取银卡会员卡</span>
                 </div>
                 <div class="am-fr">
-                    <button class="am-btn am-btn-xs btn" id="getCard">免费领卡</button>
+                    <button class="am-btn am-btn-xs btn" data-am-modal="{target: '#my-confirm'}">免费领卡</button>
                 </div>
             </div>
         </div>
@@ -235,7 +235,7 @@
             领卡成功！
         </div>
         <div class="am-modal-footer">
-            <span class="am-modal-btn" data-am-modal-confirm>去看看</span>
+            <span id="card" class="am-modal-btn" data-am-modal-confirm>去看看</span>
             <span class="am-modal-btn" data-am-modal-cancel>知道了！</span>
         </div>
     </div>
@@ -248,7 +248,9 @@
             请下载APP进行积分兑换
         </div>
         <div class="am-modal-footer">
-            <a href="#"><span class="am-modal-btn" data-am-modal-confirm>下载APP</span></a>
+           <span id="download" class="am-modal-btn am-text-center" data-am-modal-confirm>
+               下载APP
+           </span>
             <span class="am-modal-btn" data-am-modal-cancel>知道了！</span>
         </div>
     </div>
@@ -258,18 +260,13 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/amazeui.min.js"></script>
 <script>
-    $('#getCard').on('click', function () {
-        $('#my-confirm').modal({
-            relatedTarget: this,
-            onConfirm: function () {
-                self.location = "power.html";
-            },
-            onCancel: function () {
-                $('#getCard').addClass('am-disabled');
-            }
-        });
-
+    $('#card').on('click', function () {
+        self.location = "power.html";
     });
+
+    $('#download').on('click', function () {
+        self.location = "index.html";
+    })
 </script>
 </body>
 </html>

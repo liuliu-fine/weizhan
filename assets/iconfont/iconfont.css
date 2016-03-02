@@ -15,6 +15,7 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-chahao:before { content: "\e611"; }
 .icon-liwu:before { content: "\e612"; }
 .icon-dian:before { content: "\e60e"; }
 .icon-lock:before { content: "\e617"; }
@@ -29,7 +30,6 @@
 .icon-huangguan:before { content: "\e60d"; }
 .icon-shizhong:before { content: "\e60f"; }
 .icon-yinxingqia:before { content: "\e60b"; }
-.icon-cha:before { content: "\e611"; }
 .icon-arrow-copy:before { content: "\e60a"; }
 .icon-cunqianguan:before { content: "\e60c"; }
 .icon-pass:before { content: "\e618"; }

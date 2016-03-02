@@ -34,7 +34,7 @@
 
 <div class="am-g am-sticky">
     <header data-am-widget="header"
-            class="am-header am-header-default bg-white am-animation-scale-down">
+            class="am-header am-header-default bg-white">
         <div class="am-header-left am-header-nav">
             <a href="javascript:history.go(-1)">
                 <i class="iconfont text-orange am-text-lg">&#xe60a;</i>
@@ -69,25 +69,57 @@
             15858562632
         </div>
     </div>
-    <div class="am-g am-g-collapse am-margin-sm am-g-fixed">
-        <div class="am-u-sm-1">
-            <i class="iconfont">&#xe612;</i>
+    <form id="form">
+        <div class="am-g am-g-collapse am-margin-sm am-g-fixed">
+            <div class="am-u-sm-1">
+                <i class="iconfont">&#xe612;</i>
+            </div>
+            <div class="am-u-sm-11">
+                <div class="am-text-sm">请输入你的出生年份
+                    <input type="number" minlength="4" maxlength="4" value="1970" required/>
+                </div>
+                <div class="am-text-sm am-margin-vertical-sm">请输入你的出生月份
+                    <input type="number" placeholder="01"  min="01" max="12" value="01"  required/>
+                </div>
+                <div class="am-text-sm am-margin-vertical-sm">请输入你的出生日份
+                    <input type="number" placeholder="01" min="01" max="31" value="01" required data-foolish-msg="把 IQ 卡密码交出来！"/>
+                </div>
+            </div>
+            <div class="am-g am-padding">
+                <button class="am-btn am-btn-xl border-radius button am-u-sm-12 am-u-sm-centered">保存</button>
+            </div>
         </div>
-        <div class="am-u-sm-11">
-            <div class="am-text-sm">请输入你的出生年份
-                <input type="date" placeholder="输入电子邮件">
-            </div>
-            <div class="am-text-sm am-margin-vertical-sm">请输入你的出生月份
-                <input type="date" placeholder="输入电子邮件">
-            </div>
-            <div class="am-text-sm am-margin-vertical-sm">请输入你的出生日份
-                <input type="date" placeholder="输入电子邮件">
-            </div>
-        </div>
-    </div>
-    <div class="am-g am-padding">
-            <button class="am-btn am-btn-xl border-radius button am-u-sm-12 am-u-sm-centered">保存</button>
-    </div>
+    </form>
+
 </div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+    $(function() {
+        var $form = $('#form');
+        var $tooltip = $('<div id="vld-tooltip" class="am-animation-scale-down">提示信息！</div>');
+        $tooltip.appendTo(document.body);
+
+        $form.validator();
+
+        var validator = $form.data('amui.validator');
+
+        $form.on('focusin focusout', '.am-form-error input', function(e) {
+            if (e.type === 'focusin') {
+                var $this = $(this);
+                var offset = $this.offset();
+                var msg = $this.data('foolishMsg') || validator.getValidationMessage($this.data('validity'));
+
+                $tooltip.text(msg).show().css({
+                    left: offset.left + 10,
+                    top: offset.top + $(this).outerHeight() + 10
+                });
+            } else {
+                $tooltip.hide();
+            }
+        });
+    });
+</script>
 </body>
 </html>
